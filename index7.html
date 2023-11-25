@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(softwere.jpg);
+}
+.showlogin-box{
+    opacity: 1;
+    top: 50%;
+    z-index: 1;
+}
+.login-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: rgb(125, 200, 225);
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+
+}
+h2{
+    text-align: center;
+    font-size: 5em;
+    color: Green;
+    margin-bottom: 40px;
+}
+.input-box{
+    position: relative;
+    width: 310px;
+    margin: 20px 0;
+    border-bottom: 2px solid white;
+
+}
+.input-box label{
+    position: absolute;
+    top: 20%;
+    left: 0.1px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: black;
+    font-weight: 700;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-5px;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    margin-top: 10px;
+    padding-top: 0 35px 0 5px;
+}
+.remember-forget{
+    margin: -15px 0 15px;
+    font-size: 9em;
+    color: white;
+    justify-content: space-between;
+}
+button{
+    width: 100%;
+    height: 40px;
+    background: rgb(15, 224, 15);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 2em;
+    color: black;
+    font-weight: 500;
+}
+.login-box .register-link{
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    margin: 25px 0 10px;
+    
+}
+.register-link p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <form action="">
+            <h2>Login</h2>
+            <div class="input-box">
+                
+                <input type="Email" placeholder="Email" id="username">
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                 <input type="Password" placeholder="Password" id="password">
+                <label>Password</label>
+                </div>
+                <div class="Remember-Forget">
+                    <label><input type="Checkbox" name="Remember-Me" id="">Remember-Me</label>
+                    <a href="#">Forget-Password</a>
+                </div>
+                <button type="Submit" onclick="func()">Login</button>
+                <div class="Register-link">
+                    <p>Do not have an Account? <a href="#">Register Now</a></p>
+                </div>
+        </form>
+    </div>
+    <script>
+        function func(){
+            var email =document.getElementById("username").value;
+            var password =document.getElementById('password').value;
+            if (email == 'tavish123@gmail.com' && password == '123456'){
+                alert("Succesfully Login")
+                window.location.assign("TABISH KHAN/index.html")
+            }
+            else{
+                alert("Wrong Password Or Email")
+            }
+        }
+    </script>
+    
+</body>
+</html>
